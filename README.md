@@ -7,10 +7,10 @@
 
 **TinyFall** is an ultra-lightweight 1D Convolutional Neural Network (CNN) designed for geriatric fall detection using Inertial Measurement Unit (IMU) data. Optimized specifically for constrained embedded systems, this model achieves **96.9% accuracy** while fitting entirely within **50kB of memory** and enabling real-time classification with an inference time of just **0.04 milliseconds**.
 
-## 🎯 The Engineering Challenge
+## The Engineering Challenge
 The primary goal was to implement a highly accurate fall detection system while adhering to the severe computational constraints of low-power microcontrollers. This necessitated deep architectural optimization and aggressive post-training quantization to maintain high performance with minimal footprint.
 
-## 🖼️ Project Visual Hook
+## Project Demonstration
 
 Check Fall_Detector_Video.MOV for a video demonstration.
 
@@ -28,7 +28,7 @@ This project demonstrates a full end-to-end TinyML pipeline: from data preproces
 * **Quantization:** The trained model was converted to **TFLite format** and optimized using **post training quantization to int8 format**. This reduced the size by **75%** with a minimal $\sim 0.1\%$ drop in accuracy.
 * **Inference Loop:** Implements a memory-efficient **sliding window algorithm** to process incoming sensor data continuously, ensuring minimal latency and responsiveness.
 
-## 📊 Performance Metrics
+## Performance Metrics
 
 | Metric | Value | Detail |
 | :--- | :--- | :--- |
@@ -38,4 +38,4 @@ This project demonstrates a full end-to-end TinyML pipeline: from data preproces
 | **Inference Latency** | **0.04 ms** | Time required for one prediction cycle. |
 | **Deployment Platform** | **Raspberry Pi** | Confirms true embedded functionality. |
 
-* ** For extensive performance metrics and more detail please check Results.pdf**
+## For extensive performance metrics and more detail please check Results.pdf
