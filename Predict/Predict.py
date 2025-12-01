@@ -7,7 +7,7 @@ import tflite_runtime.interpreter as tflite
 window_size = 15              #CHANGE IF NEEDED
 
 # Load the TensorFlow Lite model
-interpreter = tflite.Interpreter(model_path="Check_Point.tflite")
+interpreter = tflite.Interpreter(model_path="Models/Check_Point.tflite")
 interpreter.allocate_tensors()
 
 # Get input and output tensors
