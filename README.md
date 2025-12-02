@@ -50,7 +50,7 @@ graph TD
 ```mermaid
 flowchart TD
 
-    A[SenseHat Sensors\nGyroscope (x,y,z)\nAccelerometer (x,y,z)]
+    A[SenseHat Sensors\nGyroscope xyz\nAccelerometer xyz]
         --> B[Sliding Window Buffer\nwindow_size = 15]
 
     B --> C[Preprocessing\nReshape to (1, window_size, 6)]
