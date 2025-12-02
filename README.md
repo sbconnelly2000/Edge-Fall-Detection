@@ -67,9 +67,6 @@ flowchart TD
     F --> G[SenseHat LED Matrix\nColor feedback]
 
     G -.-> A
-kotlin
-Copy code
-
 ```
 
 ### Edge Deployment & Quantization
