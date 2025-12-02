@@ -54,19 +54,22 @@ flowchart TD
 flowchart TD
 
     A[SenseHat Sensors\nGyroscope xyz\nAccelerometer xyz]
-        --> B[Sliding Window Buffer\nwindow_size = 15]
+        --> B[Sliding Window Buffer\nsize 15]
 
-    B --> C[Preprocessing\nReshape to (1, window_size, 6)]
+    B --> C[Preprocessing\nReshape to 1 x window x 6]
 
-    C --> D[TFLite Interpreter\nCheck_Point.tflite]
+    C --> D[TFLite Interpreter\nCheck Point model]
 
-    D --> E[Model Output\nSoftmax Probabilities\n(sitting, standing, walking, falling)]
+    D --> E[Model Output\nSoftmax scores\nsitting standing walking falling]
 
-    E --> F[Post-processing\nargmax(prediction)]
+    E --> F[Post processing\nArgmax to class]
 
-    F --> G[SenseHat LED Matrix\nColor Feedback\nBlue / Yellow / Green / Red]
+    F --> G[SenseHat LED Matrix\nColor feedback]
 
     G -.-> A
+kotlin
+Copy code
+
 ```
 
 ### Edge Deployment & Quantization
