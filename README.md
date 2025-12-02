@@ -31,19 +31,22 @@ complex datasets, and are able to make quick accurate classifications.
 
 ## Model Architecure
 ```mermaid
-graph TD
+flowchart TD
 
-    A[Input Layer<br/>shape = input_shape] --> B[Conv1D<br/>filters=64<br/>kernel_size=3<br/>activation='relu']
-    B --> C[MaxPooling1D<br/>pool_size=2]
-    C --> D[Flatten]
+    A[SenseHat Sensors\nGyroscope xyz\nAccelerometer xyz]
+        --> B[Sliding Window Buffer\nsize 15]
 
-    D --> E[Dense 100<br/>activation='relu']
-    E --> F[Dropout 0.5]
+    B --> C[Preprocessing\nReshape to 1 x window x 6]
 
-    F --> G[Dense 50<br/>activation='relu']
-    G --> H[Dropout 0.5]
+    C --> D[TFLite Interpreter\nCheck Point model]
 
-    H --> I[Dense 4<br/>activation='softmax'<br/>Output Classes:<br/>sitting / standing / walking / falling]
+    D --> E[Model Output\nSoftmax scores\nsitting standing walking falling]
+
+    E --> F[Post processing\nArgmax to class]
+
+    F --> G[SenseHat LED Matrix\nColor feedback]
+
+    G -.-> A
 ```
 ## System Architecture
 
