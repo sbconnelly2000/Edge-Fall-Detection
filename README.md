@@ -50,21 +50,20 @@ graph TD
 ```mermaid
 flowchart TD
 
-    A[SenseHat Sensors<br/>• Gyroscope (x,y,z)<br/>• Accelerometer (x,y,z)] 
-        --> B[Sliding Window Buffer<br/>window_size = 15]
+    A[SenseHat Sensors\nGyroscope (x,y,z)\nAccelerometer (x,y,z)]
+        --> B[Sliding Window Buffer\nwindow_size = 15]
 
-    B --> C[Preprocessing<br/>Reshape to (1, window_size, 6)]
+    B --> C[Preprocessing\nReshape to (1, window_size, 6)]
 
-    C --> D[TFLite Interpreter<br/>Check_Point.tflite]
+    C --> D[TFLite Interpreter\nCheck_Point.tflite]
 
-    D --> E[Model Output<br/>Softmax Probabilities<br/>[sitting, standing, walking, falling]]
+    D --> E[Model Output\nSoftmax Probabilities\n(sitting, standing, walking, falling)]
 
-    E --> F[Post-processing<br/>argmax(prediction)]
+    E --> F[Post-processing\nargmax(prediction)]
 
-    F --> G[SenseHat LED Matrix<br/>Color Feedback<br/>Blue/Yellow/Green/Red]
+    F --> G[SenseHat LED Matrix\nColor Feedback\nBlue / Yellow / Green / Red]
 
-    %% Loop back to data acquisition
-    G -. continuous loop .-> A
+    G -.-> A
 ```
 
 ### Edge Deployment & Quantization
