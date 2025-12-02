@@ -93,6 +93,3 @@ flowchart TD
 * Deploy model on smaller hardware
 * Used filters to reduce noise on the signal
 
-
-<img width="1279" height="854" alt="image" src="https://github.com/user-attachments/assets/8b9dc543-d297-4e44-bcb8-c81273be5c63" />
-
