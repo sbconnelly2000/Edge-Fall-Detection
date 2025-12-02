@@ -38,4 +38,6 @@ This project demonstrates a full end-to-end TinyML pipeline: from data preproces
 | **Inference Latency** | **0.04 ms** | Time required for one prediction cycle. |
 | **Deployment Platform** | **Raspberry Pi** | Confirms true embedded functionality. |
 
-## For extensive performance metrics and more detail please check Results.pdf
+## Results
+<img width="1279" height="854" alt="image" src="https://github.com/user-attachments/assets/8b9dc543-d297-4e44-bcb8-c81273be5c63" />
+
