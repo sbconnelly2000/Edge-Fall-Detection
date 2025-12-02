@@ -39,5 +39,8 @@ This project demonstrates a full end-to-end TinyML pipeline: from data preproces
 | **Deployment Platform** | **Raspberry Pi** | Confirms true embedded functionality. |
 
 ## Results
+**Video Demo**
+[Watch the video](https://youtube.com/shorts/6d8xSa9DpKQ?si=zA1o80VmW4YFAAO0)
+
 <img width="1279" height="854" alt="image" src="https://github.com/user-attachments/assets/8b9dc543-d297-4e44-bcb8-c81273be5c63" />
 
