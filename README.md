@@ -91,5 +91,5 @@ flowchart TD
 * Experiment with different model types such as LSTM
 * Use Knowledge distillation to reduce size and increase speed
 * Deploy model on smaller hardware
-* Used filters to reduce noise on the signal
+* Use filters to reduce noise on the signal
 
