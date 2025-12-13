@@ -1,6 +1,6 @@
 # TinyFall-Edge-Detection: Real-Time Fall Detection on Edge Hardware
 
-**TinyFall** is an ultra-lightweight 1D Convolutional Neural Network (CNN) designed for geriatric fall detection using Inertial Measurement Unit (IMU) data. Optimized specifically for constrained embedded systems, this model achieves **96.9% accuracy** while fitting entirely within **50kB of memory** and enabling real-time classification with an inference time of just **0.04 milliseconds**.
+**TinyFall** is an ultra-lightweight 1D Convolutional Neural Network (CNN) designed for geriatric fall detection using Inertial Measurement Unit (IMU) data. Optimized specifically for constrained embedded systems, this model achieves **96.9% accuracy** while fitting entirely within **50kB of memory** and enabling real-time classification with an inference time of just **40 milliseconds**.
 
 ## The Engineering Challenge
 The primary goal was to implement a highly accurate fall detection system while adhering to the severe computational constraints of low-power microcontrollers. This necessitated deep architectural optimization and aggressive post-training quantization to maintain high performance with minimal footprint.
